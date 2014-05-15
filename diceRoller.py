@@ -1,34 +1,28 @@
-#Coin flip program
-#Describe the purpose of this program here.
+#Dice roll program
+#Rolls a dice then shows the face
 
-inport random;time
+import random, time #Include some libraries
 
-s1 = "- - - - -\n|       |\n|   O   |\n|       |\n- - - - -\n"
-s2 = "- - - - -\n| O     |\n|       |\n|     O |\n- - - - -\n"
-s3 = "- - - - -\n| O     |\n|   O   |\n|     O |\n- - - - -\n"
-s4 = "- - - - -\n| O   O |\n|       |\n| O   O |\n- - - - -\n"
-s5 = "- - - - -\n| O   O |\n|   O   |\n| O   O |\n- - - - -\n"
-s6 = "- - - - -\n| O   O |\n| O   O |\n| O   O |\n- - - - -\n"
+strings = ["- - - - -\n|       |\n|   O   |\n|       |\n- - - - -\n", "- - - - -\n| O     |\n|       |\n|     O |\n- - - - -\n", "- - - - -\n| O     |\n|   O   |\n|     O |\n- - - - -\n", "- - - - -\n| O   O |\n|       |\n| O   O |\n- - - - -\n", "- - - - -\n| O   O |\n|   O   |\n| O   O |\n- - - - -\n", "- - - - -\n| O   O |\n| O   O |\n| O   O |\n- - - - -\n"]
+#Create a list of strings
 
-def roll():
-    Print("rolling....."
-    roll = rand.randing(7)
+def roll(): #Create a function that rolls a dice
+    print("Rolling.....")
+    roll = random.randint(1, 6)
+    return roll
 
 
-def show_dice(roll)
-    if roll = 1:
-        print(S1)
-    else roll = 2
-        print(s2)
-    else roll = 3
-        print(s3)
-    else roll = 4
-        print(s4)
-    else roll = 5
-        print(s5)
-    else roll = 6
-        print(s6)
+def show_dice(roll): #Define a function that prints the dice face
+    print(strings[roll-1])
 
-roll
-time.sleep(1)
-show_dice(roll)
+rolled = -1 #Initialize rolled
+while rolled != 6: #While they did not roll a 6
+    input("Press Enter to roll") #Wait for the user to press 'Enter'
+    rolled = roll() #Roll the dice
+    time.sleep(1) #Wait a second
+    show_dice(rolled) #Show the face
+
+#Corrected introductory comment
+#Replaced ';' with a ',' and a ' '
+#Fixed casing and missing parentheses.
+#Fixed typos and spelling errors
